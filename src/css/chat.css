@@ -1,0 +1,96 @@
+.chat{
+    /* bcz sidebar taken 35%, so its take 65% */
+    flex: 0.65;
+    display: flex;
+    flex-direction: column;
+}
+
+/* chat header */
+.chat .chat__header{
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid lightgray;
+   padding: 10px;
+}
+.chat__headerInfo{
+    flex: 1;
+    margin-left: 10px;
+}
+.chat__headerInfo h3{
+    font-size: 16px;
+}
+.chat__headerInfo p{
+    font-size: 12px;
+}
+.header__right{
+    display: flex;
+    align-items: center;
+}
+.header__right svg{
+    font-size: 18px;
+}
+
+/* chat body */
+
+.chat__body{
+   background-color: #000;
+   /* left right and below all space are taken */
+   flex: 1;
+   background-image: url(./bgimg.png);
+   padding: 25px 10px;
+   overflow-y: auto;
+}
+.chat__body .chat__message{
+    /* relative bcz we need chat__name absolute */
+    position: relative;
+    background-color: #fff;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.chat__name{
+    position: absolute;
+    /* name move 18px above */
+    top: -18px;
+    left: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.chat__time{
+    font-size: 10px;
+    margin-left: 10px;
+    /* position: absolute; */
+    /* time move 18px bottom */
+    /* bottom: -18px; */
+}
+/* reciever part */
+.chat__reciever{
+    background-color: #d6f8c6 !important;
+    margin-left: auto;
+}
+
+/* footer part */
+
+.chat__footer{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.chat__footer svg{
+    padding: 10px;
+    color: gray;
+}
+.chat__footer form{
+   flex: 1;
+}
+.chat__footer form input[type='text']{
+    border: 0;
+    height: 40px;
+    outline: 0;
+    width: 100%;
+}
+.chat__footer form input[type='submit']{
+   display: none;
+}
