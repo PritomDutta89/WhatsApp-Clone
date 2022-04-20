@@ -6,6 +6,7 @@ const reducer = (state,action)=>{
     switch(action.type){
         case "SET_USER" : {
            return{
+            // initial state
             ...state,
             user: action.user
            }

@@ -10,6 +10,7 @@ const SidebarChat = ({ id, name, addnewchat }) => {
   const [lastmessage, setLastmessage] = useState("");
 
   useEffect(() => {
+    //use for random avatar
     setSeed(Math.floor(Math.random() * 5000));
 
     db.collection("rooms").doc(id).collection("message").orderBy("timestamp", "desc").onSnapshot(snapshot=>setLastmessage(snapshot.docs.map(doc=>doc.data())) )
@@ -20,22 +21,17 @@ const SidebarChat = ({ id, name, addnewchat }) => {
     const room = prompt("Please enter room name");
 
     if (room) {
-      //if user give room name then eith the helpm of firebase we add this in cloud
+      //if user give room name then eith the helpm of firebase we add this in cloud 
       db.collection("rooms").add({
         name: room
       })
-
-      //firebase v9
-      // const col = doc(collection(db, "rooms"));
-      // //setdoc use for set the value in your database
-      // setDoc(col, {
-      //   name: room,
-      // });
     }
     else
       alert("Must be given the room name");
     
   };
+
+  console.log(lastmessage);
 
   return (
     <>
@@ -55,7 +51,7 @@ const SidebarChat = ({ id, name, addnewchat }) => {
         </Link>
       ) : (
         <div className="sidebar__chat" onClick={createChat}>
-          <h2>Add New Chat</h2>
+          <h2>Add New Chat</h2>  
         </div>
       )}
     </>

@@ -12,6 +12,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import firebase from 'firebase';
 import { useStateValue } from './StateProvider';
+import SendIcon from '@mui/icons-material/Send';
 
 
 const Chat = () => {
@@ -33,30 +34,15 @@ const Chat = () => {
 
   useEffect(()=>{
      if(roomId){
-       //version 8
        //her we fetch the room names
         db.collection("rooms").doc(roomId).onSnapshot(snapshot=>{
           setRoomName(snapshot.data().name);
         })
 
-        //firebase version 9
-        // const docRef = doc(db, "rooms", roomId);
-
-        // getDoc(docRef)
-        // .then((snapshot)=>{
-        //   //  console.log(snapshot.data().name)
-        //   setRoomName(snapshot.data().name);
-        // })
-        // .catch(err=>{
-        //   console.log(err.message)
-        // })
-
         //now fetch the messages 
         db.collection("rooms").doc(roomId).collection("message").orderBy("timestamp","asc").onSnapshot(snapshot=>{
-          setMessage(snapshot.docs.map(doc=>doc.data()));
+          setMessage(snapshot.docs.map(doc=>doc.data())); 
         })
-
-
      }
   }, [roomId]);
 
@@ -71,12 +57,14 @@ const Chat = () => {
       
       //roomId taken from useParams
       db.collection("rooms").doc(roomId).collection("message").add({
+        //fetch name from firbase authintication
         name: user.displayName,
+        
         //which you write in input field this will be message
         message: input,
         //by the time we get which is latest or old message. Time taken from server bcz different country have different time
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
-      })
+      });
        //bcz after send the msg input field be empty
      setInput("");
 
@@ -89,6 +77,7 @@ const Chat = () => {
         <div className="chat__header">
           <Avatar  src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
           <div className='chat__headerInfo'>
+          {/* dynamically call roomname */}
              <h3>{roomName}</h3>
              <p>
                {
@@ -96,7 +85,7 @@ const Chat = () => {
                }
              </p>
           </div>
-          
+
           <div className='header__right'>
               <IconButton>
                   <SearchIcon/>
@@ -111,6 +100,7 @@ const Chat = () => {
                   <MoreVertIcon/>
               </IconButton>          
           </div>
+     
         </div>
         
         <div className="chat__body">
@@ -122,7 +112,7 @@ const Chat = () => {
               <span className='chat__time'>
                  {
                    new Date(message.timestamp?.seconds*1000).toLocaleTimeString()
-                 }
+                 } 
               </span>
             </p>
             ))
@@ -133,10 +123,13 @@ const Chat = () => {
            <EmojiEmotionsIcon/>
            <AttachFileIcon/>
            <form onSubmit={sendMessage}>
-             <input type="text" value={input} placeholder='Type your message' onChange={e=>setInput(e.target.value)}/>
-             <input type="submit"/>
+             <input type="text" value={input} placeholder='Message' onChange={e=>setInput(e.target.value)}/>
+             {/* <input type="button" value="Send" onClick={sendMessage} /> */}
            </form>
-           <MicIcon/>
+           <IconButton className="icon">
+              <SendIcon className="sicon" onClick={sendMessage} />
+           </IconButton>
+           <MicIcon className="micon"/>
         </div>
 
       </div>

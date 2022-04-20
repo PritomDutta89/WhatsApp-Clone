@@ -8,7 +8,7 @@ import { useStateValue } from './StateProvider';
 const Login = () => {
 
   const [{},dispatch] = useStateValue();
-  const signIn = ()=>{
+  const GooglesignIn = ()=>{
     auth.signInWithPopup(provider).then(result=>{
       dispatch({
         type: "SET_USER",
@@ -18,13 +18,14 @@ const Login = () => {
   }
 
 
+
   return (
     <>
       <div className="login__wrapper">   
         <div className="login">
-            <img src={wp} alt="Not loading" />
+        <img src={wp} alt="" />
             <h2>Sign in to WhatsApp</h2>
-            <button onClick={signIn}>Login with Gmail</button>
+            <button onClick={GooglesignIn}>Login with Gmail</button>
         </div> 
       </div>
     </>

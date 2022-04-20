@@ -1,6 +1,7 @@
 .sidebar{
     flex: 0.35;
     background-color: #fff;
+    overflow-y: auto;
 }
 .sidebar__header{
     display: flex;
@@ -8,6 +9,9 @@
     border-right: 1px solid lightgray;
     padding: 10px;
     background-color: #ededed;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
 }
 .sidebar__headerRight{
     display: flex;
@@ -15,12 +19,9 @@
     justify-content: space-between;
     min-width: 10vw;
 }
-/* .sidebar__header > .MuiAvatar-circular{
-    width: 40px !important;
-    height: 40px !important;
-} */
 .sidebar__headerRight svg{
     font-size: 18px;
+    color: rgb(92, 91, 91);
 }
 .sidebar__search{
     display: flex;
@@ -41,6 +42,7 @@
 .sidebar__searchContainer input{
     border: 0;
     margin-left: 5px;
+    /* After use border 0 when you click then a black border came to remove this we use outline=0 */
     outline: 0;
     width: 100%;
 }

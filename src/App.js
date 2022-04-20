@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./App.css";
+import "./css/App.css";
 import Sidebar from "./Sidebar";
 import Chat from "./Chat";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -15,15 +15,17 @@ function App() {
       dispatch({
         type: "SET_USER",
         user: user
-      })
+      })  
     })
   }, []);
-
+  
+   
 
   return (
     <>
       <Router>
         <Switch>
+        {/* if user is not there then call login pqge otherwise call home page */}
         {!user ? (<Login/>) : (
           <div className="App">
             <div className="app__body">

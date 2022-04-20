@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Avatar, IconButton } from "@mui/material";
-// import {Avatar} from '@mui/icons-material';
 import DonutLargeIcon from "@mui/icons-material/DonutLarge";
 import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -10,6 +9,8 @@ import SidebarChat from "./SidebarChat";
 import db from "./firebase.js";
 import { collection, getDocs } from "firebase/firestore";
 import { useStateValue } from "./StateProvider";
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
+import LogoutIcon from '@mui/icons-material/Logout';
 import firebase from "firebase";
 
 const Sidebar = () => {
@@ -20,7 +21,7 @@ const Sidebar = () => {
   // when the app render, so it gives data from database
   useEffect(() => {
     //when a data goes in DB, then onSnapshot take a snap of the data and return it
-
+    // in DB collection name is rooms
     //firebase version 8
 
     db.collection("rooms").onSnapshot((snapshot) => {
@@ -31,22 +32,6 @@ const Sidebar = () => {
         }))
       );
     });
-
-    // firebase v9
-    //   const colref = collection(db, 'rooms');
-    //  //getDocs use for fetch the firebase data
-    //   getDocs(colref)
-    //   .then((snapshot)=>{
-
-    //     setRooms(snapshot.docs.map(doc=>({
-    //       id: doc.id,
-    //       data: doc.data()
-    //     }))
-    //     )
-    //   })
-    //   .catch(err=>{
-    //     console.log(err.message)
-    //   })
   }, []);
 
   return (
@@ -55,19 +40,18 @@ const Sidebar = () => {
 
       <div className="sidebar">
         <div className="sidebar__header">
-          <Avatar src={user.photoURL} onClick={e=>firebase.auth().signOut()} />
+          <Avatar src={user.photoURL} onClick={e=>firebase.auth().signOut()} title="Sign Out" style={{cursor: 'pointer'}}/>
           <div className="sidebar__headerRight">
-            <IconButton>
               <DonutLargeIcon />
-            </IconButton>
 
-            <IconButton>
               <ChatIcon />
+            
+            <IconButton title="Logout" onClick={e=>firebase.auth().signOut()}>
+               <LogoutIcon title="Logout"/>
             </IconButton>
 
-            <IconButton>
               <MoreVertIcon />
-            </IconButton>
+            
           </div>
         </div>
 
@@ -83,16 +67,15 @@ const Sidebar = () => {
         {/* chat section after search bar */}
 
         <div className="sidebar__Chats">
+        {/* here we pass pops "addnewchat" in SidebarChat component*/}
+          <SidebarChat addnewchat />  
           {/* here have multiple chats, so use a component, bcz this is reusable */}
-          <SidebarChat addnewchat />
           {
-
             rooms.map((room) => {
             return (
               <SidebarChat key={room.id} id={room.id} name={room.data.name} />
             );
-            })
-          
+            })        
           }
         </div>
       </div>

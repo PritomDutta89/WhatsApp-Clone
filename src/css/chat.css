@@ -13,6 +13,7 @@
    padding: 10px;
 }
 .chat__headerInfo{
+    /* take all space from top and bottom*/
     flex: 1;
     margin-left: 10px;
 }
@@ -36,8 +37,9 @@
    background-color: #000;
    /* left right and below all space are taken */
    flex: 1;
-   background-image: url(./bgimg.png);
+   background-image: url(../images/bgimg.png);
    padding: 25px 10px;
+   /* if more msg came then vertically overflow-y : auto means scrollbar came */
    overflow-y: auto;
 }
 .chat__body .chat__message{
@@ -89,8 +91,18 @@
     border: 0;
     height: 40px;
     outline: 0;
-    width: 100%;
+    width: 99%;
+    padding-left: 7px;
+    border-radius: 5px;
 }
-.chat__footer form input[type='submit']{
-   display: none;
+.chat__footer .icon{
+    margin-left: 11px;
+    width: 5%;
+    height: 40px;
+}
+.chat__footer .sicon{
+    height: 40px;
+}
+.chat__footer .micon{
+   margin-right: 10px;
 }

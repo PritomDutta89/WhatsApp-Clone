@@ -11,7 +11,7 @@ const firebaseConfig = {
   };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-
+//for DB connection
 const db = firebaseApp.firestore();
 
 //for enabled authentication
