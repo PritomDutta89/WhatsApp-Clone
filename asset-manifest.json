@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/WhatsApp-Clone/static/css/main.fc24d9fc.css",
-    "main.js": "/WhatsApp-Clone/static/js/main.68c2d895.js",
+    "main.css": "/WhatsApp-Clone/static/css/main.c9672dfe.css",
+    "main.js": "/WhatsApp-Clone/static/js/main.f5244c62.js",
     "static/media/bgimg.png": "/WhatsApp-Clone/static/media/bgimg.bded4f44087fb4e89252.png",
     "static/media/wp.png": "/WhatsApp-Clone/static/media/wp.c4e33b6e7f31c1652c5a.png",
     "index.html": "/WhatsApp-Clone/index.html",
-    "main.fc24d9fc.css.map": "/WhatsApp-Clone/static/css/main.fc24d9fc.css.map",
-    "main.68c2d895.js.map": "/WhatsApp-Clone/static/js/main.68c2d895.js.map"
+    "main.c9672dfe.css.map": "/WhatsApp-Clone/static/css/main.c9672dfe.css.map",
+    "main.f5244c62.js.map": "/WhatsApp-Clone/static/js/main.f5244c62.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc24d9fc.css",
-    "static/js/main.68c2d895.js"
+    "static/css/main.c9672dfe.css",
+    "static/js/main.f5244c62.js"
   ]
 }
