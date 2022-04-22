@@ -2,12 +2,13 @@
     flex: 0.35;
     background-color: #fff;
     overflow-y: auto;
+    overflow-x: auto;
 }
 .sidebar__header{
     display: flex;
     justify-content: space-between;
-    border-right: 1px solid lightgray;
-    padding: 10px;
+    border-right: 0.0625rem solid lightgray;
+    padding: 0.625rem;
     background-color: #ededed;
     position: -webkit-sticky;
     position: sticky;
@@ -20,28 +21,28 @@
     min-width: 10vw;
 }
 .sidebar__headerRight svg{
-    font-size: 18px;
+    font-size: 1.12rem;
     color: rgb(92, 91, 91);
 }
 .sidebar__search{
     display: flex;
     align-items: center;
     background-color: #f6f6f6;
-    height: 40px;
-    padding: 10px;
+    height: 2.5rem;
+    padding: 0.625rem;
 }
 .sidebar__searchContainer{
     display: flex;
     align-items: center;
     background-color: #fff;
-    height: 35px;
-    border-radius: 20px;
+    height: 2.187rem;
+    border-radius: 1.25rem;
     width: 100%;
 }
 /* p-1 27:39 */
 .sidebar__searchContainer input{
     border: 0;
-    margin-left: 5px;
+    margin-left: 0.312rem;
     /* After use border 0 when you click then a black border came to remove this we use outline=0 */
     outline: 0;
     width: 100%;
@@ -55,30 +56,30 @@
 .sidebar__chat{
    display: flex;
    align-items: center;
-   border-bottom: 1px solid #eaeaea;
-   padding: 10px;
+   border-bottom: 0.0625rem solid #eaeaea;
+   padding: 0.625rem;
 }
 .sidebar__chat:hover{
     cursor: pointer;
     background-color: #ebebeb;
 }
 .sidebar__chatInfo{
-    margin-left: 15px;
+    margin-left: 0.937rem;
 }
 .sidebar__chatInfo h2{
-    font-size: 16px;
+    font-size: 1rem;
 }
 .sidebar__chatInfo p{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 .sidebar__chat > h2{
-    font-size: 18px;
-    margin-left: 10px;
+    font-size: 1.125rem;
+    margin-left: 0.625rem;
     cursor: pointer;
 }
 .sidebar__chat > .MuiAvatar-circular{
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
 }
 
 .text__color{

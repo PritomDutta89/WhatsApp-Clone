@@ -4,28 +4,46 @@
     height: 100vh;
 }
 .login{
-    width: 400px;
+    width: 25rem;
     background-color: rgb(223,223,223);
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 .login img{
-    width: 100px;
+    width: 6.25rem;
 }
 
 .login h2{
-    margin: 20px 0;
+    margin: 1.25rem 0rem;
 }
 
 
 .login button{
     background-color: #3fc350;
     color: #fff;
-    border: 0px;
-    padding: 10px 20px;
+    border: 0rem;
+    padding: 0.625rem 1.25rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
+
+/* @media(max-width: 1000px){
+    .login{
+        width: 25rem;
+    }
+}
+
+@media(max-width: 700px){
+    .login{
+        width: 15rem;
+    }
+}
+
+@media(max-width: 300px){
+    .login{
+        width: 10rem;
+    }
+} */

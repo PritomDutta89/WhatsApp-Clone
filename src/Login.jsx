@@ -23,7 +23,7 @@ const Login = () => {
     <>
       <div className="login__wrapper">   
         <div className="login">
-        <img src={wp} alt="" />
+            <img src={wp} alt="" />
             <h2>Sign in to WhatsApp</h2>
             <button onClick={GooglesignIn}>Login with Gmail</button>
         </div> 

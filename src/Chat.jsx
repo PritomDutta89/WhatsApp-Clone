@@ -126,8 +126,8 @@ const Chat = () => {
              <input type="text" value={input} placeholder='Message' onChange={e=>setInput(e.target.value)}/>
              {/* <input type="button" value="Send" onClick={sendMessage} /> */}
            </form>
-           <IconButton className="icon">
-              <SendIcon className="sicon" onClick={sendMessage} />
+           <IconButton className="icon" title="send message">
+              <SendIcon className="sicon" onClick={sendMessage}/>
            </IconButton>
            <MicIcon className="micon"/>
         </div>

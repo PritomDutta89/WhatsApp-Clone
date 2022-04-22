@@ -10,25 +10,25 @@
    display: flex;
    align-items: center;
    border-bottom: 1px solid lightgray;
-   padding: 10px;
+   padding: 0.625rem;
 }
 .chat__headerInfo{
     /* take all space from top and bottom*/
     flex: 1;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 .chat__headerInfo h3{
-    font-size: 16px;
+    font-size: 1rem;
 }
 .chat__headerInfo p{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 .header__right{
     display: flex;
     align-items: center;
 }
 .header__right svg{
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 /* chat body */
@@ -38,7 +38,7 @@
    /* left right and below all space are taken */
    flex: 1;
    background-image: url(../images/bgimg.png);
-   padding: 25px 10px;
+   padding: 1.562rem 0.625rem;
    /* if more msg came then vertically overflow-y : auto means scrollbar came */
    overflow-y: auto;
 }
@@ -47,25 +47,22 @@
     position: relative;
     background-color: #fff;
     width: fit-content;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 30px;
+    padding: 0.31rem;
+    border-radius: 0.31rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.875rem;
 }
 .chat__name{
     position: absolute;
     /* name move 18px above */
-    top: -18px;
-    left: 5px;
-    font-size: 10px;
+    top: -1.125rem;
+    left: 0.312rem;
+    font-size: 0.625rem;
     font-weight: bold;
 }
 .chat__time{
-    font-size: 10px;
-    margin-left: 10px;
-    /* position: absolute; */
-    /* time move 18px bottom */
-    /* bottom: -18px; */
+    font-size: 0.625rem;
+    margin-left: 0.625rem;
 }
 /* reciever part */
 .chat__reciever{
@@ -78,10 +75,10 @@
 .chat__footer{
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 0.625rem;
 }
 .chat__footer svg{
-    padding: 10px;
+    padding: 0.625rem;
     color: gray;
 }
 .chat__footer form{
@@ -89,20 +86,20 @@
 }
 .chat__footer form input[type='text']{
     border: 0;
-    height: 40px;
+    height: 2.5rem;
     outline: 0;
     width: 99%;
-    padding-left: 7px;
-    border-radius: 5px;
+    padding-left: 0.43rem;
+    border-radius: 0.312rem;
 }
 .chat__footer .icon{
-    margin-left: 11px;
+    margin-left: 0.687rem;
     width: 5%;
-    height: 40px;
+    height: 2.5rem;
 }
 .chat__footer .sicon{
-    height: 40px;
+    height: 2.5rem;
 }
 .chat__footer .micon{
-   margin-right: 10px;
+   margin-right: 0.625rem;
 }
