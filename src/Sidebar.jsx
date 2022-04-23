@@ -42,15 +42,19 @@ const Sidebar = () => {
         <div className="sidebar__header">
           <Avatar src={user.photoURL} onClick={e=>firebase.auth().signOut()} title="Sign Out" style={{cursor: 'pointer'}}/>
           <div className="sidebar__headerRight">
-              <DonutLargeIcon />
+            
+              <DonutLargeIcon className="space" />
 
+         
               <ChatIcon />
             
-            <IconButton title="Logout" onClick={e=>firebase.auth().signOut()}>
+
+            <IconButton title="Logout" onClick={e=>firebase.auth().signOut()} className="spaceI">
                <LogoutIcon title="Logout"/>
             </IconButton>
 
               <MoreVertIcon />
+            
             
           </div>
         </div>

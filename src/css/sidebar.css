@@ -17,13 +17,21 @@
 .sidebar__headerRight{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
     min-width: 10vw;
 }
 .sidebar__headerRight svg{
     font-size: 1.12rem;
-    color: rgb(92, 91, 91);
+    color: rgb(92, 91, 91);  
 }
+.sidebar__headerRight .space{
+    margin-right: 0.3rem;
+}
+.sidebar__headerRight .spaceI{
+    width: 0.1rem;
+}
+
 .sidebar__search{
     display: flex;
     align-items: center;
