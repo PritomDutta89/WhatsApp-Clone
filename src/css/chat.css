@@ -57,10 +57,10 @@
     position: absolute;
     /* name move 18px above */
     top: -1.125rem;
-    left: 0.312rem;
-    font-size: 0.625rem;
+    left: .112rem;
+    font-size: 0.54rem;
     font-weight: bold;
-    width: 105%;   
+    width: 5.7rem;   
 }
 .chat__time{
     font-size: 0.625rem;
