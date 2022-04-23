@@ -29,21 +29,3 @@
     cursor: pointer;
     margin-top: 0.625rem;
 }
-
-/* @media(max-width: 1000px){
-    .login{
-        width: 25rem;
-    }
-}
-
-@media(max-width: 700px){
-    .login{
-        width: 15rem;
-    }
-}
-
-@media(max-width: 300px){
-    .login{
-        width: 10rem;
-    }
-} */

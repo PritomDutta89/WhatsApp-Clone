@@ -107,8 +107,8 @@ const Chat = () => {
           {
             message.map(message=>(
             <p className={`chat__message ${user.displayName==message.name && "chat__reciever"}`}>
-              <span className='chat__name'>{message.name}</span>
-                {message.message}
+                <span className='chat__name'>{message.name}</span> 
+              {message.message}
               <span className='chat__time'>
                  {
                    new Date(message.timestamp?.seconds*1000).toLocaleTimeString()

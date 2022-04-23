@@ -52,6 +52,7 @@
     font-size: 0.875rem;
     margin-bottom: 1.875rem;
 }
+
 .chat__name{
     position: absolute;
     /* name move 18px above */
@@ -59,6 +60,7 @@
     left: 0.312rem;
     font-size: 0.625rem;
     font-weight: bold;
+    width: 103%;   
 }
 .chat__time{
     font-size: 0.625rem;

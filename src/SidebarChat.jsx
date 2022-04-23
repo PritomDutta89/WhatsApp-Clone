@@ -4,6 +4,7 @@ import "./css/sidebar.css";
 import { collection, doc, setDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import db from "./firebase.js";
+import AddIcon from '@mui/icons-material/Add';
  
 const SidebarChat = ({ id, name, addnewchat }) => {
   const [seed, setSeed] = useState("");
@@ -50,8 +51,9 @@ const SidebarChat = ({ id, name, addnewchat }) => {
           </div>
         </Link>
       ) : (
-        <div className="sidebar__chat" onClick={createChat}>
-          <h2>Add New Chat</h2>  
+        <div className="sidebar__chat" onClick={createChat} title="Add a new member">
+          <h2 className="plusicon"><AddIcon></AddIcon></h2>
+          <h2>New Chat</h2>  
         </div>
       )}
     </>
