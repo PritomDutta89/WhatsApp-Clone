@@ -46,7 +46,7 @@ const Sidebar = () => {
               <DonutLargeIcon className="space" />
 
          
-              <ChatIcon />
+              <ChatIcon className="space"/>
             
 
             <IconButton title="Logout" onClick={e=>firebase.auth().signOut()} className="spaceI">
@@ -54,7 +54,6 @@ const Sidebar = () => {
             </IconButton>
 
               <MoreVertIcon />
-            
             
           </div>
         </div>
