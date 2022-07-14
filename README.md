@@ -1,4 +1,15 @@
 # WhatsApp-Web-Clone
+
+<b>Features :
+- WhatsApp Web UI
+- Create rooms or groups
+- Sign in with Google account
+- Last seen for groups
+- Messaging boxes [green for own and white for the replies of others]
+- Send message in group with timestamp 
+<br/>
+
+
 ![Screenshot (647)](https://user-images.githubusercontent.com/76867403/168461280-e3f10edd-64c0-4b24-b94a-a529eedf20e0.png)
 
 ![Screenshot (648)](https://user-images.githubusercontent.com/76867403/168461283-b299f307-5516-4880-9d77-9ac64a6bbd3b.png)
