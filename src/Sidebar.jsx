@@ -21,8 +21,7 @@ const Sidebar = () => {
   // when the app render, so it gives data from database
   useEffect(() => {
     //when a data goes in DB, then onSnapshot take a snap of the data and return it
-    // in DB collection name is rooms
-    //firebase version 8
+    // in DB. collection name is rooms
 
     db.collection("rooms").onSnapshot((snapshot) => {
       setRooms(

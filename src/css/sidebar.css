@@ -1,7 +1,7 @@
 .sidebar{
     flex: 0.35;
     background-color: #fff;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: auto;
 }
 .sidebar__header{
@@ -13,11 +13,12 @@
     position: -webkit-sticky;
     position: sticky;
     top:0;
+    z-index: 100;
 }
 .sidebar__header .MuiAvatar-img{
      width: 2.5rem;
      height: 2.45rem;
-     border-radius: 7rem;
+     border-radius: 40rem;
 }
 .sidebar__headerRight{
     display: flex;
@@ -64,7 +65,7 @@
     white-space: pre-wrap;
     word-break: break-word;   
 } 
-
+ 
 .sidebar__searchContainer input{
     border: 0;
     margin-left: 0.312rem;
