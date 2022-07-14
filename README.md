@@ -2,7 +2,7 @@
 
 <b>Features :
 - WhatsApp Web UI
-- Sign in with Google account
+- Sign in with Google account and also have Logout option
 - Create rooms
 - Last seen for groups
 - Messaging boxes [green for own and white for the replies of others]
