@@ -2,11 +2,11 @@
 
 <b>Features :
 - WhatsApp Web UI
-- Create rooms or groups
 - Sign in with Google account
+- Create rooms
 - Last seen for groups
 - Messaging boxes [green for own and white for the replies of others]
-- Send message in group with timestamp 
+- Send message with timestamp 
 <br/>
 
 
